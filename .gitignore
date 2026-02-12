@@ -205,3 +205,24 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Audio files (critical for your project!)
+audio_files/
+uploads/
+*.mp3
+*.wav
+*.flac
+*.m4a
+*.aac
+
+# Node/React (you'll add this soon)
+node_modules/
+dist/
+build/
+.vite/
+
+# Environment & secrets
+.env
+.env.local
+*.pem
+*.key
