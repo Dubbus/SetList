@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ivory-100 text-stone-800 font-body;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4a017' fill-opacity='0.04'%3E%3Cpath d='M30 0l8.66 15H21.34L30 0zm0 60l-8.66-15h17.32L30 60zM0 30l15-8.66v17.32L0 30zm60 0l-15 8.66V21.34L60 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-maroon-500 hover:bg-maroon-600 text-ivory-100 font-medium px-5 py-2.5 rounded-lg transition-all duration-200 shadow-sm hover:shadow-md active:scale-95;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-gold-500 text-gold-700 hover:bg-gold-50 font-medium px-5 py-2.5 rounded-lg transition-all duration-200;
+  }
+
+  .btn-ghost {
+    @apply bg-transparent text-stone-600 hover:text-maroon-500 hover:bg-ivory-200 font-medium px-4 py-2 rounded-lg transition-all duration-200;
+  }
+
+  .card {
+    @apply bg-white border border-ivory-300 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+
+  .input-field {
+    @apply w-full bg-ivory-50 border border-ivory-300 rounded-lg px-4 py-2.5 text-stone-800 placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-200;
+  }
+
+  .select-field {
+    @apply w-full bg-ivory-50 border border-ivory-300 rounded-lg px-4 py-2.5 text-stone-800 focus:outline-none focus:ring-2 focus:ring-gold-400 focus:border-transparent transition-all duration-200;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-stone-600 mb-1.5;
+  }
+
+  .section-divider {
+    @apply border-t border-ivory-300 my-6;
+  }
+
+  .page-title {
+    @apply font-heading text-3xl font-semibold text-maroon-700 mb-1;
+  }
+
+  .page-subtitle {
+    @apply text-stone-500 text-sm mb-6;
+  }
+
+  .star-rating {
+    @apply flex gap-1;
+  }
+
+  .star {
+    @apply text-2xl cursor-pointer transition-transform duration-100 hover:scale-110;
+  }
+
+  .tag {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .tag-alapana { @apply bg-amber-100 text-amber-800; }
+  .tag-song    { @apply bg-rose-100 text-rose-800; }
+  .tag-rtp     { @apply bg-violet-100 text-violet-800; }
+  .tag-swaram  { @apply bg-teal-100 text-teal-800; }
+  .tag-thani   { @apply bg-orange-100 text-orange-800; }
+  .tag-default { @apply bg-stone-100 text-stone-700; }
+}
