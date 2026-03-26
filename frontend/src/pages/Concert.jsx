@@ -198,10 +198,13 @@ export default function Concert() {
     [allSegments, id]
   )
   const addSegment = useStore(s => s.addSegment)
+  const updateConcert = useStore(s => s.updateConcert)
   const deleteConcert = useStore(s => s.deleteConcert)
   const currentUser = useStore(s => s.currentUser)
   const users = useStore(s => s.users)
   const [showForm, setShowForm] = useState(false)
+  const [editingConcert, setEditingConcert] = useState(false)
+  const [editForm, setEditForm] = useState({})
 
   if (!concert) {
     return (
@@ -218,6 +221,24 @@ export default function Concert() {
   const handleAddSegment = (data) => {
     addSegment(data)
     setShowForm(false)
+  }
+
+  const handleEditOpen = () => {
+    setEditForm({
+      title: concert.title,
+      artist: concert.artist,
+      sourceUrl: concert.sourceUrl || '',
+      date: concert.date || '',
+      venue: concert.venue || '',
+      description: concert.description || '',
+    })
+    setEditingConcert(true)
+  }
+
+  const handleEditSave = (e) => {
+    e.preventDefault()
+    updateConcert(id, editForm)
+    setEditingConcert(false)
   }
 
   const handleDelete = () => {
@@ -238,42 +259,83 @@ export default function Concert() {
 
       {/* Concert header */}
       <div className="card p-6 mb-8">
-        <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
-          <div className="min-w-0">
-            <h1 className="font-heading text-3xl font-semibold text-maroon-700 leading-tight">{concert.title}</h1>
-            <p className="text-gold-700 font-medium text-lg mt-1">{concert.artist}</p>
+        {editingConcert ? (
+          <form onSubmit={handleEditSave} className="space-y-4 animate-slide-up">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label className="label">Title *</label>
+                <input required className="input-field" value={editForm.title}
+                  onChange={e => setEditForm(f => ({ ...f, title: e.target.value }))} />
+              </div>
+              <div>
+                <label className="label">Artist *</label>
+                <input required className="input-field" value={editForm.artist}
+                  onChange={e => setEditForm(f => ({ ...f, artist: e.target.value }))} />
+              </div>
+              <div>
+                <label className="label">Date</label>
+                <input type="date" className="input-field" value={editForm.date}
+                  onChange={e => setEditForm(f => ({ ...f, date: e.target.value }))} />
+              </div>
+              <div>
+                <label className="label">Venue</label>
+                <input className="input-field" value={editForm.venue}
+                  onChange={e => setEditForm(f => ({ ...f, venue: e.target.value }))} />
+              </div>
+            </div>
+            <div>
+              <label className="label">Source URL</label>
+              <input type="url" className="input-field" value={editForm.sourceUrl}
+                onChange={e => setEditForm(f => ({ ...f, sourceUrl: e.target.value }))} />
+            </div>
+            <div>
+              <label className="label">Description</label>
+              <textarea rows={3} className="input-field resize-none" value={editForm.description}
+                onChange={e => setEditForm(f => ({ ...f, description: e.target.value }))} />
+            </div>
+            <div className="flex gap-3">
+              <button type="submit" className="btn-primary text-sm">Save Changes</button>
+              <button type="button" onClick={() => setEditingConcert(false)} className="btn-ghost text-sm">Cancel</button>
+            </div>
+          </form>
+        ) : (
+          <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-4">
+            <div className="min-w-0">
+              <h1 className="font-heading text-3xl font-semibold text-maroon-700 leading-tight">{concert.title}</h1>
+              <p className="text-gold-700 font-medium text-lg mt-1">{concert.artist}</p>
 
-            <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-sm text-stone-500">
-              {concert.venue && <span>📍 {concert.venue}</span>}
-              {concert.date && <span>🗓 {concert.date}</span>}
-              {uploader && <span>Added by {uploader.username}</span>}
+              <div className="flex flex-wrap gap-x-5 gap-y-1 mt-3 text-sm text-stone-500">
+                {concert.venue && <span>📍 {concert.venue}</span>}
+                {concert.date && <span>🗓 {concert.date}</span>}
+                {uploader && <span>Added by {uploader.username}</span>}
+              </div>
+
+              {concert.description && (
+                <p className="mt-3 text-stone-600 leading-relaxed">{concert.description}</p>
+              )}
+
+              {concert.sourceUrl && (
+                <a
+                  href={concert.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-3 text-sm text-maroon-600 hover:text-maroon-700 font-medium"
+                >
+                  ▶ Open recording ↗
+                </a>
+              )}
             </div>
 
-            {concert.description && (
-              <p className="mt-3 text-stone-600 leading-relaxed">{concert.description}</p>
-            )}
-
-            {concert.sourceUrl && (
-              <a
-                href={concert.sourceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 mt-3 text-sm text-maroon-600 hover:text-maroon-700 font-medium"
-              >
-                ▶ Open recording ↗
-              </a>
+            {isOwner && (
+              <div className="flex gap-2 shrink-0">
+                <button onClick={handleEditOpen} className="btn-ghost text-sm px-3 py-1.5">Edit</button>
+                <button onClick={handleDelete} className="text-sm text-rose-400 hover:text-rose-600 hover:bg-rose-50 px-3 py-1.5 rounded-lg transition-colors">
+                  Delete
+                </button>
+              </div>
             )}
           </div>
-
-          {isOwner && (
-            <div className="flex gap-2 shrink-0">
-              <Link to={`/concert/${id}/edit`} className="btn-ghost text-sm px-3 py-1.5">Edit</Link>
-              <button onClick={handleDelete} className="text-sm text-rose-400 hover:text-rose-600 hover:bg-rose-50 px-3 py-1.5 rounded-lg transition-colors">
-                Delete
-              </button>
-            </div>
-          )}
-        </div>
+        )}
       </div>
 
       {/* Segments section */}
