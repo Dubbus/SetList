@@ -39,6 +39,19 @@ const useStore = create(
         })
       },
 
+      // ── demo seed ───────────────────────────────────────────────────────────
+      seedIfEmpty: (data) => {
+        const { concerts, users } = get()
+        if (concerts.length > 0 || users.length > 0) return false
+        set({
+          users: [data.defaultUser],
+          currentUser: data.defaultUser,
+          concerts: data.concerts,
+          segments: data.segments,
+        })
+        return true
+      },
+
       // ── concerts ────────────────────────────────────────────────────────────
       concerts: [],
 

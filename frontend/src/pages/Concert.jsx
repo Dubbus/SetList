@@ -4,6 +4,7 @@ import useStore from '../store/useStore'
 import StarRating from '../components/StarRating'
 import SegmentTag from '../components/SegmentTag'
 import DescriptionImporter from '../components/DescriptionImporter'
+import Recommendations from '../components/Recommendations'
 import { parseTime, formatTime, formatDate } from '../utils/time'
 
 const SEGMENT_TYPES = ['alapana', 'song', 'RTP', 'swaram', 'thani']
@@ -381,6 +382,8 @@ export default function Concert() {
           ))}
         </div>
       )}
+
+      <Recommendations concertId={id} />
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import useStore from './store/useStore'
 import Navbar from './components/Navbar'
@@ -15,6 +16,13 @@ function RequireAuth({ children }) {
 }
 
 export default function App() {
+  useEffect(() => {
+    fetch('/seed.json')
+      .then(r => (r.ok ? r.json() : null))
+      .then(data => { if (data) useStore.getState().seedIfEmpty(data) })
+      .catch(() => {})
+  }, [])
+
   return (
     <BrowserRouter>
       <div className="min-h-screen flex flex-col">
