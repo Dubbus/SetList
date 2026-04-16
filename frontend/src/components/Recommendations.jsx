@@ -129,7 +129,7 @@ export default function Recommendations({ concertId }) {
               <SongCard
                 key={`m-${key}-${i}`}
                 song={song}
-                badge={fallbackSet.has(key) ? 'baseline agrees' : 'new discovery'}
+                badge={fallbackSet.has(key) ? 'baseline agrees' : null}
               />
             ))}
           </div>

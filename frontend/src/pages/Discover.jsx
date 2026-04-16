@@ -76,11 +76,11 @@ function PlaylistCard({ slug, entry, songsMap }) {
             <div key={i} className="flex items-center gap-2 text-sm">
               <span className="text-stone-300 text-xs font-mono w-4 text-right">{i + 1}.</span>
               <span className="text-stone-700 truncate">{r.song.title}</span>
-              <span className={`shrink-0 text-[9px] font-bold uppercase px-1 py-0.5 rounded ${
-                r.inFallback ? 'bg-gold-100 text-gold-600' : 'bg-maroon-100 text-maroon-600'
-              }`}>
-                {r.inFallback ? 'confirmed' : 'new'}
-              </span>
+              {r.inFallback && (
+                <span className="shrink-0 text-[9px] font-bold uppercase px-1 py-0.5 rounded bg-gold-100 text-gold-600">
+                  confirmed
+                </span>
+              )}
             </div>
           ))}
         </div>
