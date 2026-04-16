@@ -1,0 +1,732 @@
+[
+  {
+    "name": "Thiruppavai pasurams 1-15",
+    "intent": "First half of Andal's 30-pasuram cycle. Coherent by author+cycle, cuts across ragas.",
+    "songs": [
+      {
+        "title": "Margazhi Thingal (Thiruppavai Pasuram #01)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Vaiyathu VaazveergaaL (Thiruppavai Pasuram #02)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Ongi Ulagalandha (Thiruppavai Pasuram #03)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Aazhi Mazhai Kanna (Thiruppavai Pasuram #04)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Maayanai Mannu (Thiruppavai Pasuram #05)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Pullum Silambina (Thiruppavai Pasuram #06)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Kisu Kisu Enru (Thiruppavai Pasuram #07)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Kizh Vanam (Thiruppavai Pasuram #08)",
+        "composer": "Andal"
+      },
+      {
+        "title": "ThUmani mAdathu (Thiruppavai Pasuram #09)",
+        "composer": "Andal"
+      },
+      {
+        "title": "NoRRu Chuvarkkam (Thiruppavai Pasuram #10)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Katru Karuvai (Thiruppavai Pasuram #11)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Kanaithillan Katrrerumai (Thiruppavai Pasuram #12)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Pullin Vaay Kidanay (Thiruppavai Pasuram #13)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Ungkal Puzhai (Thiruppavai Pasuram #14)",
+        "composer": "Andal"
+      },
+      {
+        "title": "nAyakanAi ninra (Thiruppavai Pasuram #16)",
+        "composer": "Andal"
+      }
+    ]
+  },
+  {
+    "name": "Thiruppavai pasurams 16-30",
+    "intent": "Second half of Andal's cycle. Leave-out tests should recover pasurams from the other half.",
+    "songs": [
+      {
+        "title": "amparamE thaNNIrE (Thiruppavai Pasuram #17)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Unthu Matha Kalitran (Thiruppavai Pasuram #18)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Kuthu Vilakkeriya (Thiruppavai Pasuram #19)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Muppathi mUvar (Thiruppavai Pasuram #20)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Etrra Kalangkal (Thiruppavai Pasuram #21)",
+        "composer": "Andal"
+      },
+      {
+        "title": "AngkaN Maa NyAlathu (Thiruppavai Pasuram #22)",
+        "composer": "Andal"
+      },
+      {
+        "title": "mAri malai (Thiruppavai Pasuram #23)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Anru Ivvulagam (Thiruppavai Pasuram #24)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Oruthi MaganAi (Thiruppavai Pasuram #25)",
+        "composer": "Andal"
+      },
+      {
+        "title": "mAlE manivannA (Thiruppavai Pasuram #26)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Koodarai Vellum (Thiruppavai Pasuram #27)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Karavaigal Pin Cendru (Thiruppavai Pasuram #28)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Sitran Siru kAlE (Thiruppavai Pasuram #29)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Vanga Kadal(Thiruppavai Pasuram #30)",
+        "composer": "Andal"
+      }
+    ]
+  },
+  {
+    "name": "Dikshitar Navavarnam",
+    "intent": "Dikshitar's 9 krithis praising Kamakshi — each in a different raga. Canonical cycle.",
+    "songs": [
+      {
+        "title": "Kamalambambike",
+        "composer": "Dikshitar ( Navavarnam Dhyana Krithi )"
+      },
+      {
+        "title": "Kamalamba Samrakshatu",
+        "composer": "Dikshitar ( Navavarnam #1 )"
+      },
+      {
+        "title": "Kamalambam Bhajare",
+        "composer": "Dikshitar ( Navavarnam #2 )"
+      },
+      {
+        "title": "Sri Kamalaambikayaa Kataakshitoham",
+        "composer": "Dikshitar ( Navavarnam #3 )"
+      },
+      {
+        "title": "Kamalaambikayai",
+        "composer": "Dikshitar ( Navavarnam #4 )"
+      },
+      {
+        "title": "Shree Kamalaambikaayaah Param Nahire",
+        "composer": "Dikshitar ( Navavarnam #5 )"
+      },
+      {
+        "title": "Kamalaambikaayaastava Bhaktoham",
+        "composer": "Dikshitar ( Navavarnam #6 )"
+      },
+      {
+        "title": "Sri Kamalambikayam Bhaktim Karomi",
+        "composer": "Dikshitar ( Navavarnam #7 )"
+      },
+      {
+        "title": "Shree Kamalaambike Avaava",
+        "composer": "Dikshitar ( Navavarnam #8 )"
+      },
+      {
+        "title": "Shree Kamalamba Jayati",
+        "composer": "Dikshitar ( Navavarnam #9 )"
+      },
+      {
+        "title": "Shree Kamalaambike Shive",
+        "composer": "Dikshitar (  Navavarnam Mangala Krithi )"
+      }
+    ]
+  },
+  {
+    "name": "Tyagaraja Pancharatna Krithis",
+    "intent": "Tyagaraja's 4 greatest compositions, always performed together at Thyagaraja Aradhana. Full canonical set.",
+    "songs": [
+      {
+        "title": "Dudukugala",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Endaro Mahanu Bhavulu",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Jagadananda Karaka",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "KanaKanaRuchira",
+        "composer": "Tyagaraja"
+      }
+    ]
+  },
+  {
+    "name": "Invocations to Ganapati",
+    "intent": "Songs praising Ganesha across ragas and composers. Devotional theme is the only common thread.",
+    "songs": [
+      {
+        "title": "Gajananayutham",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Gajavadana",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Gajavadana",
+        "composer": "Kumara Ettendra"
+      },
+      {
+        "title": "Siddhi Vinayakam",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Sri Ganapathini",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Sri Mahaganapathim Bhajeham",
+        "composer": "HH Jayachamaraja Wodeyar"
+      },
+      {
+        "title": "Sri Mahaganapathi",
+        "composer": "Muthuswamy Dikshitar"
+      },
+      {
+        "title": "Vatapi Ganapathim",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Vinayakuni",
+        "composer": "Tyagaraja"
+      }
+    ]
+  },
+  {
+    "name": "Rama bhakti",
+    "intent": "Songs on Lord Rama — Tyagaraja wrote many, others contributed.",
+    "songs": [
+      {
+        "title": "Bhavayami Raghuramam",
+        "composer": "Swati Tirunal"
+      },
+      {
+        "title": "DAsharathi Ni Runamu",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "MarugelarA O RaghavA",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "mOhana rAmA",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Namo Namo Raghukula Nayaka",
+        "composer": "Annamacharya"
+      },
+      {
+        "title": "Pahi Rama Doota",
+        "composer": "Tyagaraja. Learnt From Recording of: C.V.Shankar"
+      },
+      {
+        "title": "Raghunayaka",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Ramachandram Bhaavayami",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Rama Dayajudave",
+        "composer": "Bhadrachala Ramadas"
+      },
+      {
+        "title": "Rama Nannu Brovara",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Rama Katha Sudha",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Rama Neepai Tanaku",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Rama Nee Samana",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Rama Ninnu Nammina",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Teliyaleru Rama",
+        "composer": "Tyagaraja"
+      }
+    ]
+  },
+  {
+    "name": "Devi / Shakti krithis",
+    "intent": "Songs praising the goddess in her many forms. Excludes Navavarnam.",
+    "songs": [
+      {
+        "title": "Abhayambikaya",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Amba Neelayatakshi",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Janani Ninnu Vina",
+        "composer": "Subbaraya Shastry"
+      },
+      {
+        "title": "Janani Maamava",
+        "composer": "Swati Tirunal"
+      },
+      {
+        "title": "Kamakshi (Swarajati)",
+        "composer": "Shyama Shastry"
+      },
+      {
+        "title": "Kamakshi Sri Varalakshmi",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Kamakshi (Swarajati)",
+        "composer": "Shyama Shastry"
+      },
+      {
+        "title": "Lalithe",
+        "composer": "Chengalvaraya Shastri"
+      },
+      {
+        "title": "Madhurambikayam",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Mahalakshmi Jaganmata",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Mamava Meenakshi",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Meenakshi Me Mudam",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Nirajakshi Kamakshi",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Pahimaam Sri RajaRajeshwari",
+        "composer": "Maha Vaidyanatha Iyer. Learnt From Recording of: Semmangudi"
+      },
+      {
+        "title": "Palimchu Kamakshi",
+        "composer": "Shyama Shastri"
+      },
+      {
+        "title": "Shankari Shankuru",
+        "composer": "Shyama Shastri"
+      },
+      {
+        "title": "Sri Kamakshi",
+        "composer": "Annaswamy Shastry"
+      },
+      {
+        "title": "Sri Lalithe",
+        "composer": "Annaswami Shastry"
+      },
+      {
+        "title": "Sri Saraswati",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Sri Varalakshmi",
+        "composer": "Dikshitar"
+      }
+    ]
+  },
+  {
+    "name": "Tyagaraja in the 5 heavy ragas",
+    "intent": "Tyagaraja krithis in Thodi, Bhairavi, Shankarabharanam, Kalyani, Kharaharapriya.",
+    "songs": [
+      {
+        "title": "Aragimpave",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Bhakthi Biccha",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Chakkani Raja",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "DAsharathi Ni Runamu",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Emi JesithE",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Enati Nomu",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Enduku Peddala",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Kaddanuvariki",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Koluvamaregada",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Manasu Swaddhina",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Mitri BhagyamE",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Neevanti Deivamunu",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Nidhi ChAla SukhamA",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Prakkala Nilabadi",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Rama Nee Samana",
+        "composer": "Tyagaraja"
+      }
+    ]
+  },
+  {
+    "name": "Dikshitar sampler",
+    "intent": "Range of Dikshitar compositions excluding Navavarnam.",
+    "songs": [
+      {
+        "title": "Abhayambikaya",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "AkhilAndEsvari RakshamAm",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Amba Neelayatakshi",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Ananda Natana Prakasam",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Angaarakamaashrayaami",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Annapurne",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "ardhanArIshvaram",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Arunaachala Naatham",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Balagopala",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Balasubramanyam Bhajeham",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Budhamashrayami (Navagraha Krithi)",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Chandram Bhaja (Navagraha Krithi)",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Chintayamaa",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Dakshinamurthe",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Dharma Samvarddhani",
+        "composer": "Dikshitar"
+      }
+    ]
+  },
+  {
+    "name": "Papanasam Sivan sampler",
+    "intent": "Modern-era composer, Tamil compositions.",
+    "songs": [
+      {
+        "title": "Andavane",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Balakrishnan",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Devi Neeye Thunai",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Enna Thavam",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Enna Thavam Seidanai",
+        "composer": "Papanasam Sivam"
+      },
+      {
+        "title": "Gajavadana",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Idadhu Padam Thooki",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Jaanaki Pathe",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Kaa vaa vaa",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Kapali",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Karpagame",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Kumaranthaal",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Maal Maruga",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Maa Ramanan",
+        "composer": "Papanasam Sivan"
+      },
+      {
+        "title": "Mahalakshmi Jaganmata",
+        "composer": "Papanasam Sivan"
+      }
+    ]
+  },
+  {
+    "name": "Kalyani ragam (control)",
+    "intent": "All Kalyani songs. Same-raga control — tests whether CF adds value over property filtering.",
+    "songs": [
+      {
+        "title": "Alamelu Manga Nee",
+        "composer": "Annamacharya"
+      },
+      {
+        "title": "amparamE thaNNIrE (Thiruppavai Pasuram #17)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Himadri Suthe PAhimAm",
+        "composer": "Shyama Shastry"
+      },
+      {
+        "title": "Kamalambam Bhajare",
+        "composer": "Dikshitar ( Navavarnam #2 )"
+      },
+      {
+        "title": "Nidhi ChAla SukhamA",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Pankaja Lochana",
+        "composer": "Swati Tirunal"
+      },
+      {
+        "title": "Sivakameshwari",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "SivE PAhimAm",
+        "composer": "Tyagaraja"
+      }
+    ]
+  },
+  {
+    "name": "Bhairavi ragam (control)",
+    "intent": "All Bhairavi songs. Same-raga control — tests whether CF adds value over property filtering.",
+    "songs": [
+      {
+        "title": "Balagopala",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Chintayamaa",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "Enati Nomu",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Janani Maamava",
+        "composer": "Swati Tirunal"
+      },
+      {
+        "title": "Kamakshi (Swarajati)",
+        "composer": "Shyama Shastry"
+      },
+      {
+        "title": "Shree Kamalaambikaayaah Param Nahire",
+        "composer": "Dikshitar ( Navavarnam #5 )"
+      },
+      {
+        "title": "Kisu Kisu Enru (Thiruppavai Pasuram #07)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Sri Lalithe",
+        "composer": "Annaswami Shastry"
+      },
+      {
+        "title": "Upacharamu jEsEvaru",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "yArO ivar yArO",
+        "composer": "Arunachala Kavi"
+      }
+    ]
+  },
+  {
+    "name": "Thodi ragam (control)",
+    "intent": "All Thodi songs. Same-raga control — tests whether CF adds value over property filtering.",
+    "songs": [
+      {
+        "title": "Aragimpave",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "DAsharathi Ni Runamu",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Emi JesithE",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Gajavadana",
+        "composer": "Kumara Ettendra"
+      },
+      {
+        "title": "Kaddanuvariki",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Kamalambambike",
+        "composer": "Dikshitar ( Navavarnam Dhyana Krithi )"
+      },
+      {
+        "title": "Koluvamaregada",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "Neevanti Deivamunu",
+        "composer": "Tyagaraja"
+      },
+      {
+        "title": "NoRRu Chuvarkkam (Thiruppavai Pasuram #10)",
+        "composer": "Andal"
+      },
+      {
+        "title": "Rave Himagiri (Swarajati)",
+        "composer": "Shyama Shastri"
+      },
+      {
+        "title": "Sri Krishnam Bhaja",
+        "composer": "Dikshitar"
+      },
+      {
+        "title": "ThAyE yasOdhA",
+        "composer": "OothukaDu Venkata Subbaiyer"
+      }
+    ]
+  }
+]

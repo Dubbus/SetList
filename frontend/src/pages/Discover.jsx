@@ -12,11 +12,30 @@ function StatCard({ value, label, sub }) {
   )
 }
 
+function MiniBar({ label, count, total, color }) {
+  const pct = Math.min(100, Math.round((count / total) * 100))
+  return (
+    <div>
+      <div className="flex items-center justify-between text-[11px] text-stone-400 mb-1">
+        <span>{label}</span>
+        <span>{count}/{total}</span>
+      </div>
+      <div className="h-1.5 bg-ivory-200 rounded-full overflow-hidden">
+        <div className={`h-full rounded-full ${color}`} style={{ width: `${pct}%` }} />
+      </div>
+    </div>
+  )
+}
+
 function PlaylistRow({ slug, entry, songsMap }) {
   const overlapCount = useMemo(() => {
     const kSet = new Set((entry.kenneth || []).slice(0, 10))
     return (entry.cebbEmbed || []).slice(0, 10).filter(k => kSet.has(k)).length
   }, [entry])
+
+  const fallbackSet = new Set(entry.fallback || [])
+  const chosenTop10 = (entry[entry.chosen] || []).slice(0, 10)
+  const fallbackAgreement = chosenTop10.filter(k => fallbackSet.has(k)).length
 
   const chosenColor = {
     hybrid: 'bg-emerald-100 text-emerald-700',
@@ -32,13 +51,13 @@ function PlaylistRow({ slug, entry, songsMap }) {
     fallback: 'Fallback',
   }[entry.chosen] || entry.chosen
 
-  const topRecs = (entry[entry.chosen] || [])
+  const topRecs = chosenTop10
     .slice(0, 3)
-    .map(k => songsMap[k])
-    .filter(Boolean)
+    .map(k => ({ song: songsMap[k], inFallback: fallbackSet.has(k) }))
+    .filter(r => r.song)
 
-  const barWidth = Math.min(100, Math.round((overlapCount / 10) * 100))
-  const barColor = overlapCount >= 3 ? 'bg-emerald-400' : overlapCount >= 1 ? 'bg-gold-400' : 'bg-stone-300'
+  const modelBarColor = overlapCount >= 3 ? 'bg-emerald-400' : overlapCount >= 1 ? 'bg-gold-400' : 'bg-stone-300'
+  const fallbackBarColor = fallbackAgreement >= 4 ? 'bg-emerald-400' : fallbackAgreement >= 1 ? 'bg-gold-400' : 'bg-stone-300'
 
   return (
     <Link
@@ -59,26 +78,26 @@ function PlaylistRow({ slug, entry, songsMap }) {
         </span>
       </div>
 
-      {/* Agreement bar */}
-      <div className="mb-3">
-        <div className="flex items-center justify-between text-[11px] text-stone-400 mb-1">
-          <span>Model agreement</span>
-          <span>{overlapCount}/10 overlap</span>
-        </div>
-        <div className="h-1.5 bg-ivory-200 rounded-full overflow-hidden">
-          <div className={`h-full rounded-full ${barColor}`} style={{ width: `${barWidth}%` }} />
-        </div>
+      {/* Agreement bars */}
+      <div className="space-y-1.5 mb-3">
+        <MiniBar label="Graph vs Audio" count={overlapCount} total={10} color={modelBarColor} />
+        <MiniBar label="Model vs Fallback" count={fallbackAgreement} total={10} color={fallbackBarColor} />
       </div>
 
       {/* Top 3 recs preview */}
       {topRecs.length > 0 && (
         <div className="space-y-1">
           <div className="text-[11px] uppercase tracking-wide text-stone-400">Top picks</div>
-          {topRecs.map((s, i) => (
+          {topRecs.map((r, i) => (
             <div key={i} className="flex items-center gap-2 text-sm">
               <span className="text-stone-300 text-xs font-mono w-4 text-right">{i + 1}.</span>
-              <span className="text-stone-700 truncate">{s.title}</span>
-              {s.ragam && <span className="text-xs text-gold-600 shrink-0">({s.ragam})</span>}
+              <span className="text-stone-700 truncate">{r.song.title}</span>
+              {r.inFallback && (
+                <span className="shrink-0 text-[9px] font-bold uppercase bg-gold-100 text-gold-600 px-1 py-0.5 rounded">
+                  fallback
+                </span>
+              )}
+              {r.song.ragam && <span className="text-xs text-gold-600 shrink-0">({r.song.ragam})</span>}
             </div>
           ))}
         </div>
@@ -103,9 +122,15 @@ export default function Discover() {
     if (!data?.concerts) return null
     const entries = Object.values(data.concerts)
     const byChosen = {}
-    entries.forEach(e => { byChosen[e.chosen] = (byChosen[e.chosen] || 0) + 1 })
+    let totalFbAgree = 0
+    entries.forEach(e => {
+      byChosen[e.chosen] = (byChosen[e.chosen] || 0) + 1
+      const fbSet = new Set(e.fallback || [])
+      totalFbAgree += (e[e.chosen] || []).slice(0, 10).filter(k => fbSet.has(k)).length
+    })
     const totalSongs = Object.keys(data.songs || {}).length
-    return { total: entries.length, byChosen, totalSongs }
+    const avgFbAgree = entries.length ? (totalFbAgree / entries.length).toFixed(1) : 0
+    return { total: entries.length, byChosen, totalSongs, avgFbAgree }
   }, [data])
 
   if (!loaded) {
@@ -135,7 +160,7 @@ export default function Discover() {
       </p>
 
       {/* Stats row */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+      <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-10">
         <StatCard value={stats.total} label="Playlists Analyzed" />
         <StatCard value={stats.totalSongs} label="Songs in Catalog" />
         <StatCard
@@ -146,7 +171,12 @@ export default function Discover() {
         <StatCard
           value={(stats.byChosen.kenneth || 0) + (stats.byChosen.cebbEmbed || 0)}
           label="Single-Model Picks"
-          sub="One model was more confident"
+          sub="One model more confident"
+        />
+        <StatCard
+          value={stats.avgFbAgree}
+          label="Avg Fallback Match"
+          sub="Out of top 10 per playlist"
         />
       </div>
 

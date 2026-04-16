@@ -40,14 +40,12 @@ export default function Navbar() {
         </Link>
 
         {/* Nav links */}
-        {currentUser && (
-          <nav className="hidden sm:flex items-center gap-6">
-            {navLink('/browse', 'Browse')}
-            {navLink('/discover', 'Discover')}
-            {navLink('/upload', 'Add Concert')}
-            {navLink('/profile', 'Profile')}
-          </nav>
-        )}
+        <nav className="hidden sm:flex items-center gap-6">
+          {navLink('/browse', 'Browse')}
+          {navLink('/discover', 'Discover')}
+          {currentUser && navLink('/upload', 'Add Concert')}
+          {currentUser && navLink('/profile', 'Profile')}
+        </nav>
 
         {/* Auth */}
         <div className="flex items-center gap-3">
@@ -70,14 +68,12 @@ export default function Navbar() {
       </div>
 
       {/* Mobile nav */}
-      {currentUser && (
-        <div className="sm:hidden border-t border-ivory-200 px-4 py-2 flex gap-4">
-          {navLink('/browse', 'Browse')}
-          {navLink('/discover', 'Discover')}
-          {navLink('/upload', 'Add Concert')}
-          {navLink('/profile', 'Profile')}
-        </div>
-      )}
+      <div className="sm:hidden border-t border-ivory-200 px-4 py-2 flex gap-4">
+        {navLink('/browse', 'Browse')}
+        {navLink('/discover', 'Discover')}
+        {currentUser && navLink('/upload', 'Add Concert')}
+        {currentUser && navLink('/profile', 'Profile')}
+      </div>
     </header>
   )
 }
