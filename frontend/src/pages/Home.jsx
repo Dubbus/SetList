@@ -64,14 +64,18 @@ export default function Home() {
           {[
             { icon: '🎵', title: 'Segment Concerts', desc: 'Mark alapanas, songs, RTPs, swarams, and thanis with precise timestamps.' },
             { icon: '⭐', title: 'Rate Segments', desc: 'Rate individual segments to build your personal Carnatic taste profile.' },
-            { icon: '🔍', title: 'Browse & Discover', desc: 'Explore concerts added by the community, filter by artist or raga.' },
-          ].map(f => (
-            <div key={f.title} className="card p-6 text-center">
-              <div className="text-3xl mb-3">{f.icon}</div>
-              <h3 className="font-heading text-maroon-700 font-semibold mb-2">{f.title}</h3>
-              <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
-            </div>
-          ))}
+            { icon: '🔍', title: 'Browse & Discover', desc: 'Explore concerts added by the community, filter by artist or raga.', link: '/discover' },
+          ].map(f => {
+            const Wrapper = f.link ? Link : 'div'
+            const extraProps = f.link ? { to: f.link } : {}
+            return (
+              <Wrapper key={f.title} {...extraProps} className="card p-6 text-center">
+                <div className="text-3xl mb-3">{f.icon}</div>
+                <h3 className="font-heading text-maroon-700 font-semibold mb-2">{f.title}</h3>
+                <p className="text-stone-500 text-sm leading-relaxed">{f.desc}</p>
+              </Wrapper>
+            )
+          })}
         </div>
       </section>
 

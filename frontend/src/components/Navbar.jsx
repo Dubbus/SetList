@@ -43,6 +43,7 @@ export default function Navbar() {
         {currentUser && (
           <nav className="hidden sm:flex items-center gap-6">
             {navLink('/browse', 'Browse')}
+            {navLink('/discover', 'Discover')}
             {navLink('/upload', 'Add Concert')}
             {navLink('/profile', 'Profile')}
           </nav>
@@ -72,6 +73,7 @@ export default function Navbar() {
       {currentUser && (
         <div className="sm:hidden border-t border-ivory-200 px-4 py-2 flex gap-4">
           {navLink('/browse', 'Browse')}
+          {navLink('/discover', 'Discover')}
           {navLink('/upload', 'Add Concert')}
           {navLink('/profile', 'Profile')}
         </div>

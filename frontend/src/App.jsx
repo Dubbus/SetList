@@ -9,6 +9,7 @@ import Upload from './pages/Upload'
 import Browse from './pages/Browse'
 import Concert from './pages/Concert'
 import Profile from './pages/Profile'
+import Discover from './pages/Discover'
 
 function RequireAuth({ children }) {
   const currentUser = useStore(s => s.currentUser)
@@ -33,6 +34,7 @@ export default function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/browse" element={<Browse />} />
+            <Route path="/discover" element={<Discover />} />
             <Route path="/concert/:id" element={<Concert />} />
             <Route path="/upload" element={<RequireAuth><Upload /></RequireAuth>} />
             <Route path="/profile" element={<RequireAuth><Profile /></RequireAuth>} />
